@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.welcome-gradient {
+  background: linear-gradient(180deg, #4F46E5 0%, #7C3AED 100%);
+}
+
+.btn-primary {
+  background: #4F46E5;
+  color: white;
+  font-weight: bold;
+  border-radius: 12;
+  padding: 16;
+}
+
+.chat-bubble {
+  border-radius: 16;
+  padding: 12;
+  margin: 8;
+  max-width: 80%;
+}
+
+.chat-bubble-ai {
+  background: #F3F4F6;
+  align-self: flex-start;
+}
+
+.chat-bubble-user {
+  background: #4F46E5;
+  color: white;
+  align-self: flex-end;
+}

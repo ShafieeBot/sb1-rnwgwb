@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Chat with TravelAI" class="bg-indigo-600 text-white" />
+    
+    <GridLayout rows="*, auto">
+        <ScrollView row="0">
+            <StackLayout class="p-4">
+                <Repeater items="{{ messages }}">
+                    <Repeater.itemTemplate>
+                        <Label text="{{ text }}" class="{{ isAI ? 'chat-bubble chat-bubble-ai' : 'chat-bubble chat-bubble-user' }}" textWrap="true" />
+                    </Repeater.itemTemplate>
+                </Repeater>
+            </StackLayout>
+        </ScrollView>
+        
+        <GridLayout row="1" columns="*, auto" class="p-4 bg-white border-t border-gray-200">
+            <TextField col="0" text="{{ messageText }}" hint="Type your message..." class="p-2 rounded-lg bg-gray-100" />
+            <Button col="1" text="Send" tap="{{ sendMessage }}" class="ml-2 bg-indigo-600 text-white font-bold rounded-lg p-2" />
+        </GridLayout>
+    </GridLayout>
+</Page>

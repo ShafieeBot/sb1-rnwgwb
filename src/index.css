@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.welcome-gradient {
+  background: linear-gradient(180deg, #4F46E5 0%, #7C3AED 100%);
+}
+
+.chat-bubble {
+  @apply rounded-2xl p-3 my-2 max-w-[80%];
+}
+
+.chat-bubble-ai {
+  @apply bg-gray-100 self-start;
+}
+
+.chat-bubble-user {
+  @apply bg-indigo-600 text-white self-end;
+}
